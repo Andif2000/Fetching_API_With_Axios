@@ -36,12 +36,26 @@ const Home = () => {
                     paddingHorizontal: 10,
                     backgroundColor: '#000080'
                 }}>
-                <Text
+                <View
                     style={{
-                        fontSize: 25,
-                        fontWeight: '600',
-                        color: '#ffffff'
-                    }}>My Quotes</Text>
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}>
+                    <TouchableOpacity>
+                        <Ionicons
+                            name='menu'
+                            size={35}
+                            style={{ color: '#ffffff' }} />
+                    </TouchableOpacity>
+                    <Text
+                        style={{
+                            fontSize: 25,
+                            fontWeight: '600',
+                            color: '#ffffff',
+                            paddingLeft: 10
+                        }}>My Quotes</Text>
+                </View>
                 <TouchableOpacity>
                     <Ionicons
                         name='search'
@@ -67,7 +81,7 @@ const Home = () => {
                                         marginVertical: 10,
                                         backgroundColor: '#87ceeb',
                                         borderRadius: 10,
-                                        padding:10
+                                        padding: 10
                                     }}>
                                     <Text
                                         style={{
@@ -76,15 +90,15 @@ const Home = () => {
                                             bottom: 10,
                                             textAlign: 'center',
                                             fontWeight: '600',
-                                            letterSpacing:0.5
+                                            letterSpacing: 0.5
                                         }}>{item.quote}</Text>
                                     <Text
                                         style={{
                                             textAlign: 'left',
                                             padding: 10,
                                             fontSize: 14,
-                                            top:20,
-                                            color:'#4682B4'
+                                            top: 20,
+                                            color: '#4682B4'
                                         }}>#{item.author}</Text>
                                 </TouchableOpacity>
                             );
