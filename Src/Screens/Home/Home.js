@@ -59,26 +59,34 @@ const Home = () => {
                     {data &&
                         data.map((item, index) => {
                             return (
-                                <View key={index}
+                                <TouchableOpacity key={index}
                                     style={{
                                         width: width - 50,
                                         minHeight: 150,
-                                        alignItems: 'center',
                                         justifyContent: 'center',
                                         marginVertical: 10,
                                         backgroundColor: '#87ceeb',
+                                        borderRadius: 10,
+                                        padding:10
                                     }}>
                                     <Text
                                         style={{
                                             maxWidth: width - 60,
-                                            fontSize:16,
-                                            bottom:20
+                                            fontSize: 18,
+                                            bottom: 10,
+                                            textAlign: 'center',
+                                            fontWeight: '600',
+                                            letterSpacing:0.5
                                         }}>{item.quote}</Text>
-                                        <Text
-                                         style={{
-                                            textAlign:'right'
-                                         }}>#{item.author}</Text>
-                                </View>
+                                    <Text
+                                        style={{
+                                            textAlign: 'left',
+                                            padding: 10,
+                                            fontSize: 14,
+                                            top:20,
+                                            color:'#4682B4'
+                                        }}>#{item.author}</Text>
+                                </TouchableOpacity>
                             );
                         })
                     }
